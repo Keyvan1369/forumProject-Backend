@@ -9,13 +9,13 @@ const login = (req, res) => {
   } else if (!emailRegex.test(email)) {
     return res.status(400).json({ message: "Invalid email format" });
   }
-  res.status(200).send("signup Res2");
+  res.status(200).send("login Res2");
 };
 
 const signup = (req, res) => {
   /*   console.log(req.query);
   console.log(req.body.pass); */
-  let { name, email, password } = req.body;                    //change const to let
+  let { name, email, password } = req.body;        //change const to let
 
   email = email.trim().toLowerCase();    
   let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -27,7 +27,7 @@ const signup = (req, res) => {
     return res.status(400).json({ message: "Invalid email format" });
   }
 
-  res.status(200).send("signup Res2");
+  res.status(201).send("signup Res2");
 };
 
 const forgotPassword = (req, res) => {
