@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(authRouter);
 app.use(indexRouter);
 app.use(userRouter);
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
