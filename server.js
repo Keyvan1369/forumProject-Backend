@@ -32,5 +32,5 @@ mongoose
   .catch((err) => console.error("Error connecting to DB:", err));
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`App listening on port ${port}`);
 });
